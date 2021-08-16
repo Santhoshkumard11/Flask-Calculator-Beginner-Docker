@@ -1,6 +1,16 @@
 # Flask-Calculator-Beginner
 This is Beginners Friendly Flask Application which does the basic arithmetic operations (+,-,*,/) 
 
+## Pull the docker Image
+```
+docker pull santhoshkdhana/flask-calculator-beginner:latest
+```
+## Start the container
+```
+docker container run -d -p 5000:5000 --name=santyflask flask-calculator-begineer
+```
+
+
 # Flask Calculator
 The container will expose port **5000**
 
