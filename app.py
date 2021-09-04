@@ -6,7 +6,7 @@ app = Flask(__name__)
 api = Api(app)
 
 
-def checkPostedData(postedData, functionName):
+def check_posted_data(postedData, functionName):
     if (functionName == "add" or functionName == "subtract" or functionName == "multiply"):
         if "x" not in postedData or "y" not in postedData:
             return 301 #Missing parameter
@@ -28,7 +28,7 @@ class Add(Resource):
         postedData = request.get_json()
 
         #Steb 1b: Verify validity of posted data
-        status_code = checkPostedData(postedData, "add")
+        status_code = check_posted_data(postedData, "add")
         if (status_code!=200):
             retJson = {
                 "Message": "An error happened",
@@ -58,7 +58,7 @@ class Subtract(Resource):
         postedData = request.get_json()
 
         #Steb 1b: Verify validity of posted data
-        status_code = checkPostedData(postedData, "subtract")
+        status_code = check_posted_data(postedData, "subtract")
 
 
         if (status_code!=200):
@@ -91,7 +91,7 @@ class Multiply(Resource):
         postedData = request.get_json()
 
         #Steb 1b: Verify validity of posted data
-        status_code = checkPostedData(postedData, "multiply")
+        status_code = check_posted_data(postedData, "multiply")
 
 
         if (status_code!=200):
@@ -123,7 +123,7 @@ class Divide(Resource):
         postedData = request.get_json()
 
         #Steb 1b: Verify validity of posted data
-        status_code = checkPostedData(postedData, "division")
+        status_code = check_posted_data(postedData, "division")
 
 
         if (status_code!=200):
