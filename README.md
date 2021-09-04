@@ -9,7 +9,7 @@ docker pull santhoshkdhana/flask-calculator-beginner:latest
 ```
 ## Start the container
 ```
-docker container run -d -p 5000:5000 --name=santyflask flask-calculator-begineer
+docker container run -d -p 5000:5000 --name=santyflask flask-calculator-beginner
 ```
 
 
