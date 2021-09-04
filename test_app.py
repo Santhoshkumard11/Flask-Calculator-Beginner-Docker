@@ -1,6 +1,6 @@
 import unittest
 
-from snippet import check_posted_data
+from app import check_posted_data
 
 class TestSnippet(unittest.TestCase):
     
