@@ -33,7 +33,9 @@ pipeline {
             junit allowEmptyResults: true, testResults:'**/test_reports/*.xml'
         }
         success {
-            sh "python3 app.py"
+            
+            sh "sudo nohup python3 app.py > log.txt 2>&1 &"
+            echo "Flask Application Up and running!!"
         }
         failure {
             echo 'Build stage failed'
