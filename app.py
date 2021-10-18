@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_restful import Api, Resource
-from logic import Add, Subtract, Multiply, Divide
+from logic import Add, Subtract, Multiply, Divide , Mod,Exponent,Floor
 
 
 app = Flask(__name__)
@@ -11,6 +11,8 @@ api.add_resource(Subtract, "/subtract")
 api.add_resource(Multiply, "/multiply")
 api.add_resource(Divide, "/division")
 api.add_resource(Mod, "/Mod")
+api.add_resource(Exponent, "/Exponent")
+api.add_resource(Floor, "/Floor")
 
 
 @app.route('/')
