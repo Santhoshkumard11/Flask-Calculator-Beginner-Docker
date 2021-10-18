@@ -10,6 +10,7 @@ api.add_resource(Add, "/add")
 api.add_resource(Subtract, "/subtract")
 api.add_resource(Multiply, "/multiply")
 api.add_resource(Divide, "/division")
+api.add_resource(Mod, "/Mod")
 
 
 @app.route('/')
