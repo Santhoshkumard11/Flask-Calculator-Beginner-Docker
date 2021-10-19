@@ -135,37 +135,7 @@ class Floor(Resource):
 
 
 
-class Subtract(Resource):
-    def post(self):
-        #If I am here, then the resouce Subtract was requested using the method POST
 
-        #Step 1: Get posted data:
-        postedData = request.get_json()
-
-        #Steb 1b: Verify validity of posted data
-        status_code = check_posted_data(postedData, "subtract")
-
-
-        if (status_code!=200):
-            retJson = {
-                "Message": "An error happened",
-                "Status Code":status_code
-            }
-            return jsonify(retJson)
-
-        #If i am here, then status_code == 200
-        x = postedData["x"]
-        y = postedData["y"]
-        x = int(x)
-        y = int(y)
-
-        #Step 2: Subtract the posted data
-        ret = x-y
-        retMap = {
-            'Message': ret,
-            'Status Code': 200
-        }
-        return jsonify(retMap)
         
 class Add(Resource):
     def post(self):
