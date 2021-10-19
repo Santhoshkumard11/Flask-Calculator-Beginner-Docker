@@ -33,7 +33,7 @@ class Mod(Resource):
         print(postedData)
 
         #Steb 1b: Verify validity of posted data
-        status_code = check_posted_data(postedData, "add")
+        status_code = check_posted_data(postedData, "mod")
         if (status_code!=200):
             retJson = {
                 "Message": "An error happened",
@@ -66,7 +66,7 @@ class Exponent(Resource):
         print(postedData)
 
         #Steb 1b: Verify validity of posted data
-        status_code = check_posted_data(postedData, "add")
+        status_code = check_posted_data(postedData, "exponent")
         if (status_code!=200):
             retJson = {
                 "Message": "An error happened",
@@ -100,7 +100,7 @@ class Floor(Resource):
         print(postedData)
 
         #Steb 1b: Verify validity of posted data
-        status_code = check_posted_data(postedData, "add")
+        status_code = check_posted_data(postedData, "floor")
         if (status_code!=200):
             retJson = {
                 "Message": "An error happened",
