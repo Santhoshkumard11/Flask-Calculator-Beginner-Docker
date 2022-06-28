@@ -13,6 +13,7 @@ pipeline {
 
     stage('Test') {
       steps {
+        sh "pip install -r requirements.txt"
         sh 'apt install python3-flask -y'
         sh 'python3 test_app.py'
         input(id: "Deploy Gate", message: "Deploy ${params.project_name}?", ok: 'Deploy')
